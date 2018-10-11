@@ -1,0 +1,31 @@
+
+<div class="container">
+	<div class="row">
+		<div class="col s6">
+			
+			<h2>*NgIf</h2>
+			<hr>
+			<div *ngIf="mostrar" class="card-panel  blue darken-4">
+				<span class="white-text">
+					<h5> "{{frase.mensaje }}"</h5>
+					<p>- {{frase.autor}}</p>
+				</span>
+			</div>
+
+			<a (click)="mostrar = !mostrar" class="waves-effect waves-light btn">Mostrar/Ocultar</a>
+		</div>
+		<div class="col s6 ">
+			
+			<h2>*NgFor</h2>
+			<hr>
+			<div class="card-panel  blue darken-4">
+				<span class="white-text">
+
+					<div class="collection">
+					   <a *ngFor = "let personaje of personajes" href="#!" class="collection-item">{{personaje}}</a>
+					  
+					 </div>
+				</span>
+			</div>
+		</div>
+	</div>
